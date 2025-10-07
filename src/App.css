@@ -1,0 +1,64 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: var(--primary-bg);
+  color: #fff;
+}
+:root{
+  --primary-bg:#09090B;
+  --secondary-bg:#141319;
+  --tertiary-bg: #17171C;
+}
+
+
+
+.sp-text{
+  /* color: rgb(168, 86, 244); */
+  background: linear-gradient(
+    90deg,
+    #efd5ff 0%,
+    #515ada 100%
+  );
+
+  background-clip: text;          /* Standard property */
+  -webkit-background-clip: text;  /* Vendor prefix for WebKit browsers */
+
+  color: transparent;             /* Standard way */
+  -webkit-text-fill-color: transparent; /* WebKit way */
+}
+/* .nav {
+  padding-left: 50px;
+  padding-right: 50px;
+} */
+html{
+  overflow-x: hidden;
+}
+.icon{
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid #1f2937;
+  background-color: var(--secondary-bg);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.hm {
+  padding: 20px;
+}
+.left, .right {
+  padding: 20px;
+  margin-top: 5;
+}
+.lt{
+  padding: 4px;
+  margin-top: 4px;
+}
+.leftSelect{
+  color: #515ada;
+}

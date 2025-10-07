@@ -18,3 +18,6 @@ If you are developing a production application, we recommend using TypeScript wi
 
 /////vercel app link 
 https://ai-comp-generator-lm6l.vercel.app
+
+////////github repo link 
+https://github.com/Ashwani4011/aiCompGenerator

@@ -3,8 +3,8 @@ import { useState } from 'react'
 // import viteLogo from '/vite.svg'
 import './App.css'
 import Home from "./Pages/Home"
-import Login from "./pages/Login"; // adjust path if needed
-import Signup from "./pages/Signup";  // your home component
+import Login from "./Pages/Login"; // adjust path if needed
+import Signup from "./Pages/Signup";  // your home component
 import NoPage from "./Pages/NoPage"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 

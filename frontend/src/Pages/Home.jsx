@@ -41,8 +41,6 @@ function Home() {
     setOutputScreen(false);
 
     try {
-      console.log(prompt)
-      console.log(framework)
       // Point to the backend server
       //now change the backend fetching with bakcend render link
       // const res = await fetch("/api/genai", {

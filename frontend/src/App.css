@@ -8,7 +8,7 @@
 }
 html, body {
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 @media (max-width: 768px) {
   .hm {
@@ -58,10 +58,6 @@ body{
   color: transparent;             /* Standard way */
   -webkit-text-fill-color: transparent; /* WebKit way */
 }
-/* .nav {
-  padding-left: 50px;
-  padding-right: 50px;
-} */
 html{
   overflow-x: hidden;
 }
@@ -73,9 +69,6 @@ html{
   border-radius: 10px;
   cursor: pointer;
 }
-/* .icon {
-  padding: 10px;
-} */
 
 @media (min-width: 640px) {
   .icon {
@@ -87,7 +80,7 @@ html{
 }
 .left, .right {
   padding: 20px;
-  margin-top: 5;
+  margin-top: 5px;
 }
 .lt{
   padding: 4px;

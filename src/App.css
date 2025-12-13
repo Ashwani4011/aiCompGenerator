@@ -1,7 +1,14 @@
 
-*{
+/* *{
   margin: 0;
   padding: 0;
+} */
+* {
+  box-sizing: border-box;
+}
+
+textarea, input, iframe {
+  max-width: 100%;
 }
 body{
   margin: 0;
@@ -42,12 +49,21 @@ html{
   overflow-x: hidden;
 }
 .icon{
-  padding: 15px;
+  padding: 10px;
   font-size: 20px;
   border: 1px solid #1f2937;
   background-color: var(--secondary-bg);
   border-radius: 10px;
   cursor: pointer;
+}
+/* .icon {
+  padding: 10px;
+} */
+
+@media (min-width: 640px) {
+  .icon {
+    padding: 15px;
+  }
 }
 .hm {
   padding: 20px;

@@ -4,7 +4,9 @@ function Login() {
   return (
    <>
     <div className="container flex items-center justify-center " style={{padding:"50px"}}>
-      <form action="" className='mt-6 flex w-[400px] h-[500px] bg-amber-50 flex-col items-center rounded-xl border-[1px] border-zinc-500 gap-y-4' style={{padding:"20px",margin:"20px"}}>
+      {/* <form action="" className='mt-6 flex w-[400px] h-[500px] bg-amber-50 flex-col items-center rounded-xl border-[1px] border-zinc-500 gap-y-4' style={{padding:"20px",margin:"20px"}}> */}
+      <form className="w-full max-w-[400px] min-h-fit bg-amber-50
+ flex flex-col items-center rounded-xl border gap-y-4 p-6">
         <h1 className='font-bold text-black text-3xl'>Welcome to Login Page</h1>
         <br />
         <label  className='w-full '>
@@ -41,7 +43,8 @@ function Login() {
         />
         </label>
         <br /><br />
-        <div className="bottomLogin flex items-center justify-around gap-[100px] " style={{paddingRight:"2px"}}>
+        {/* <div className="bottomLogin flex items-center justify-around gap-[100px] " style={{paddingRight:"2px"}}> */}
+        <div className="bottomLogin flex flex-col sm:flex-row gap-4 w-full">
           <button
         type="submit" style={{ paddingLeft:"12px",paddingRight:"12px",paddingTop:"8px",paddingBottom:"8px",marginBottom:"2px"}}
         className="mt-6 w-[200px] flex items-center justify-center rounded-[8px] bg-cyan-950 py-[8px] px-[12px] font-medium text-white"

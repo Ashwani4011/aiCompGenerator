@@ -90,8 +90,10 @@ const downloadFile=()=>{
   return (
     <>
     <Navbar/>
-    <div className="hm flex items-center justify-between gap-[20px]">
-      <div className="left w-[50%] h-[80vh] bg-[#141319] mt-5">
+    {/* <div className="hm flex items-center justify-between gap-[20px]"> */}
+    <div className="hm flex flex-col lg:flex-row gap-4">
+      {/* <div className="left w-[50%] h-[80vh] bg-[#141319] mt-5"> */}
+       <div className="left w-full lg:w-1/2 min-h-[60vh] bg-[#141319]">
         <h3 className=' lt text-[25px] font-semibold sp-text'> AI component generator</h3>
         <p className='lt text-[gray] mt-[2px] text-[15px]'>Describe your component and let AI will code for you </p>
         <p className='lt text-[18px] font-bold'>Framework</p>
@@ -109,7 +111,8 @@ const downloadFile=()=>{
           }Generate</button>
         </div>
       </div>
-      <div className="right relative w-[50%] h-[80vh] bg-[#141319] mt-5">
+      {/* <div className="right relative w-[50%] h-[80vh] bg-[#141319] mt-5"> */}
+      <div className="right w-full lg:w-1/2 min-h-[60vh] bg-[#141319]">
         {
           (outputScreen===false)?
           <>
@@ -158,7 +161,8 @@ const downloadFile=()=>{
             
           </div>
         </div>
-        <div className="editor h-[55vh] ">
+        {/* <div className="editor h-[55vh] "> */}
+          <div className="editor min-h-[300px] lg:min-h-[55vh]">
           {
             tab==1?<>
             <Editor height="100%" theme='vs-dark' language="html" value={code} />
@@ -193,5 +197,3 @@ const downloadFile=()=>{
 }
 
 export default Home
-//API key
-// AIzaSyCpnoTVE8fDG18-Atair9U45XixCCYzpnk

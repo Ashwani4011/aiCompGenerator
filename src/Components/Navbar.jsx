@@ -9,7 +9,8 @@ function Navbar() {
   
   return (
     <div>
-        <div className="nav flex items-center justify-between h-[80px] border-b-[1px] border-gray-700" style={{paddingLeft:"40px",paddingRight:"20px"}}>
+        {/* <div className="nav flex items-center justify-between h-[80px] border-b-[1px] border-gray-700" style={{paddingLeft:"40px",paddingRight:"20px"}}> */}
+          <div className="nav flex items-center justify-between h-[64px] px-4 sm:px-6 lg:px-10 border-b border-gray-700">
             <div className="logo ">
                 <h3 className="text-[25px] sp-text  font-[700]">GenUI</h3>
             </div>

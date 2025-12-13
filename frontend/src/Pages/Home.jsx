@@ -44,7 +44,10 @@ function Home() {
       console.log(prompt)
       console.log(framework)
       // Point to the backend server
-      const res = await fetch("/api/genai", {
+      //now change the backend fetching with bakcend render link
+      // const res = await fetch("/api/genai", {
+      const API_BASE = import.meta.env.VITE_API_BASE_URL;
+      const res = await fetch(`${API_BASE}/api/genai`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -178,7 +181,8 @@ function Home() {
 
                   </div>
                 </div>
-                <div className="editor flex-1 min-h-[300px] lg:min-h-[55vh] overflow-auto">
+                {/* <div className="editor flex-1 min-h-[300px] lg:min-h-[55vh] "> */}
+                <div className=" editor flex-1 min-h-[300px] lg:min-h-[55vh] overflow-auto">
                   {
                     tab === 1 ? <>
                       <Editor
@@ -196,7 +200,8 @@ function Home() {
                     </> :
                       <>
                         <iframe
-                          className="w-full h-full bg-white"
+                          className="w-full  bg-white border-0 overflow-auto"
+                          height="100%"
                           srcDoc={`<!DOCTYPE html>
 <html>
 <head>
@@ -228,7 +233,7 @@ ${code}
                 <button className="copy bg-[#333] w-[40px] h-[40px] rounded-xl border-[1px] border-zinc-700 flex items-center justify-center transition-all hover:bg-red-600 " color='red' onClick={() => { setIsnewTabopen(false) }}><IoClose /></button>
               </div>
             </div>
-            <iframe srcDoc={code} className='w-full h-full' ></iframe>
+            <iframe srcDoc={code} className='w-full h-full border-0' ></iframe>
 
           </div>
         </> : ""

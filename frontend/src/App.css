@@ -1,11 +1,20 @@
 
-
 * {
   box-sizing: border-box;
 }
 html, body {
   width: 100%;
   overflow: auto;
+}
+
+.editor iframe {
+  overflow: auto;
+  height: 100%;
+}
+
+/* IMPORTANT: stop parent from eating scroll in preview */
+.editor {
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .hm {
@@ -16,8 +25,20 @@ html, body {
     width: 100%;
     height: auto;
   }
-  .editor {
-    height: 400px; /* smaller height for mobile */
+  .editor{
+    min-height: 55vh;
+  }
+  .editor Editor{
+    min-height: 50vh;
+  }
+  .editor iframe{
+    min-height: 50vh;
+  }
+  .skeleton {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -54,6 +75,9 @@ body{
 
   color: transparent;             /* Standard way */
   -webkit-text-fill-color: transparent; /* WebKit way */
+}
+html{
+  overflow-x: hidden;
 }
 .icon{
   padding: 10px;

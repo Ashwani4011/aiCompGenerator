@@ -11,7 +11,7 @@ import { IoClose } from "react-icons/io5";
 import { FiRefreshCcw } from "react-icons/fi";
 import { ClipLoader } from "react-spinners";//for loader in react
 import Editor from '@monaco-editor/react';//monaco editor is use to add code editor react component from react S
-//whole react icons taken from react icons a github repo or you can use ract icon of npm also 
+//whole react icons taken from react icons a github repo or you can use react icon of npm also 
 import { toast } from 'react-toastify';//from npm library to pop a error or success of some event 
 function Home() {
   const options = [
@@ -33,7 +33,6 @@ function Home() {
   // const ai = new GoogleGenAI({apiKey:"AIzaSyCpnoTVE8fDG18-Atair9U45XixCCYzpnk"});
 
   // this function made to handle the API 
-
   async function getResponse() {
     if (!prompt.trim()) return;
 
@@ -41,7 +40,7 @@ function Home() {
     setOutputScreen(false);
 
     try {
-      // Point to the backend server
+      // Point to backend server
       //now change the backend fetching with bakcend render link
       // const res = await fetch("/api/genai", {
       const API_BASE = import.meta.env.VITE_API_BASE_URL;
@@ -88,10 +87,8 @@ function Home() {
     try {
       await navigator.clipboard.writeText(code);
       toast.success("code copied succesfully!")
-      // console.log('content copied to clipboard')
     }
     catch (err) {
-      // console.error('failed to copy: ',err)
       toast.error("Failed to copy!")
     }
   }
@@ -131,7 +128,7 @@ function Home() {
               }Generate</button>
           </div>
         </div>
-        <div className="right relative w-full lg:w-1/2 bg-[#141319] rounded-xl flex flex-col">
+        <div className="right relative w-full lg:w-1/2  min-h-[60vh] bg-[#141319] rounded-xl flex flex-col">
           {
             (outputScreen === false) ?
               <>
@@ -179,8 +176,7 @@ function Home() {
 
                   </div>
                 </div>
-                {/* <div className="editor flex-1 min-h-[300px] lg:min-h-[55vh] "> */}
-                <div className=" editor flex-1 min-h-[300px] lg:min-h-[55vh] overflow-auto">
+                <div className=" editor flex-1 min-h-[55vh] lg:min-h-[55vh] overflow-auto">
                   {
                     tab === 1 ? <>
                       <Editor
@@ -198,7 +194,7 @@ function Home() {
                     </> :
                       <>
                         <iframe
-                          className="w-full  bg-white border-0 overflow-auto"
+                          className="w-full  bg-white border-0"
                           height="100%"
                           srcDoc={`<!DOCTYPE html>
 <html>

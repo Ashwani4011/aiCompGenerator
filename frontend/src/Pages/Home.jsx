@@ -176,40 +176,43 @@ function Home() {
 
                   </div>
                 </div>
-                <div className=" editor flex-1 min-h-[55vh] lg:min-h-[55vh] overflow-auto">
-                  {
-                    tab === 1 ? <>
-                      <Editor
-                        height="100%"
-                        theme="vs-dark"
-                        language="html"
-                        value={code}
-                        options={{
-                          scrollBeyondLastLine: false,
-                          wordWrap: "on",
-                          minimap: { enabled: false },
-                          automaticLayout: true
-                        }}
-                      />
-                    </> :
-                      <>
-                        <iframe
-                          className="w-full  bg-white border-0"
-                          height="100%"
-                          srcDoc={`<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<style>body{margin:0;padding:16px}</style>
-</head>
-<body>
-${code}
-</body>
-</html>`}
-                        />
-
-                      </>
-                  }
+                <div className="editor">
+                  <div className={tab === 1 ? "block h-full" : "hidden"}>
+                    <Editor
+                      height="100%"
+                      theme="vs-dark"
+                      language="html"
+                      value={code}
+                      options={{
+                        scrollBeyondLastLine: false,
+                        wordWrap: "on",
+                        minimap: { enabled: false },
+                        automaticLayout: true
+                      }}
+                    />
+                  </div>
+                  <div className={tab === 2 ? "block h-full" : "hidden"}>
+                    <iframe
+                      className="w-full  bg-white border-0 "
+                      height="100%"
+                      srcDoc={`<!DOCTYPE html>
+                      <html>
+                      <head>
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                      <style>
+                        html, body { margin: 0;
+                                    padding: 16px;
+                                    height: auto;
+                                    overflow-y: auto;
+                                  }
+                      </style>
+                      </head>
+                      <body>
+                      ${code}
+                      </body>
+                      </html>`}
+                    />
+                  </div>
                 </div>
               </>
           }
@@ -218,7 +221,7 @@ ${code}
       </div>
       {
         isnewTabopen === true ? <>
-          <div className="container absolute left-0 top-0 right-0 bottom-0 bg-white w-screen min-h-[55vh] overflow-auto">
+          <div className="container absolute left-0 top-0 right-0 bottom-0 bg-white w-screen ">
             <div className="topContainer w-full h-[60px] flex items-center justify-between" style={{ paddingLeft: "20px", paddingRight: "20px" }}>
               <div className="topContainerleft">
                 <p className="font-bold text-[black]">Preview</p>
@@ -227,8 +230,26 @@ ${code}
                 <button className="copy bg-[#333] w-[40px] h-[40px] rounded-xl border-[1px] border-zinc-700 flex items-center justify-center transition-all hover:bg-red-600 " color='red' onClick={() => { setIsnewTabopen(false) }}><IoClose /></button>
               </div>
             </div>
-            <iframe srcDoc={code} className='w-full h-full border-0' ></iframe>
-
+            {/* <iframe srcDoc={code} className='w-full h-full border-0' ></iframe> */}
+            <iframe
+              className="w-full h-full border-0"
+              srcDoc={`<!DOCTYPE html>
+                <html>
+                  <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                    <style>
+                      html, body {
+                        margin: 0;
+                        padding: 16px;
+                        overflow-y: auto;
+                      }
+                    </style>
+                  </head>
+                  <body>
+                    ${code}
+                  </body>
+                </html>`}
+            />
           </div>
         </> : ""
       }

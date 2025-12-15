@@ -7,15 +7,32 @@ html, body {
   overflow: auto;
 }
 
-.editor iframe {
-  overflow: auto;
-  height: 100%;
-}
-
 /* IMPORTANT: stop parent from eating scroll in preview */
 .editor {
   overflow: hidden;
+  height: 60vh;
 }
+.editor iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* mobile smooth scroll */
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden; /* important */
+}
+.container iframe {
+  height: calc(100vh - 60px); /* subtract top bar height */
+  overflow-y: auto;
+  display: block;
+}
+/* IMPORTANT: stop parent from eating scroll in preview */
+/* .editor {
+  overflow: hidden;
+} */
 @media (max-width: 768px) {
   .hm {
     flex-direction: column;
@@ -26,13 +43,15 @@ html, body {
     height: auto;
   }
   .editor{
-    min-height: 55vh;
+    /* min-height: 55vh; */
+    height: 55vh;
+    overflow: auto;
   }
   .editor Editor{
-    min-height: 50vh;
+    min-height: 55vh;
   }
   .editor iframe{
-    min-height: 50vh;
+    min-height: 55vh;
   }
   .skeleton {
     flex: 1;

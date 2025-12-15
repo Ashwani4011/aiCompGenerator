@@ -4,7 +4,6 @@ function Signup() {
   return (
     <>
     <div className="container flex items-center justify-center " style={{padding:"15px"}}>
-      {/* <form action="" className='mt-6 flex w-[450px] h-[550px] bg-amber-50 flex-col items-center rounded-xl border-[1px] border-zinc-500 gap-y-4' style={{padding:"20px",margin:"20px"}}> */}
       <form className="w-full max-w-[450px] min-h-fit bg-amber-50
  flex flex-col items-center rounded-xl border gap-y-4 p-6">
 

@@ -1,8 +1,5 @@
 
-/* *{
-  margin: 0;
-  padding: 0;
-} */
+
 * {
   box-sizing: border-box;
 }
@@ -57,9 +54,6 @@ body{
 
   color: transparent;             /* Standard way */
   -webkit-text-fill-color: transparent; /* WebKit way */
-}
-html{
-  overflow-x: hidden;
 }
 .icon{
   padding: 10px;
